@@ -1,0 +1,25 @@
+C:\Users\f0cuS\source\repos\Chat\Chat\bin\Debug\Chat.exe.config
+C:\Users\f0cuS\source\repos\Chat\Chat\bin\Debug\Chat.exe
+C:\Users\f0cuS\source\repos\Chat\Chat\bin\Debug\Chat.pdb
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.csprojAssemblyReference.cache
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.Client.resources
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.Properties.Resources.resources
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.csproj.GenerateResource.cache
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.exe
+C:\Users\f0cuS\source\repos\Chat\Chat\obj\Debug\Chat.pdb
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Chat.exe.config
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Chat.exe
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Chat.pdb
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.Client.resources
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.Properties.Resources.resources
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csproj.GenerateResource.cache
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.exe
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.pdb
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.RegistrationForm.resources
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.exe
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.pdb
+D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.exe.config
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csprojAssemblyReference.cache
+D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csproj.CopyComplete

@@ -1,0 +1,30 @@
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.csprojAssemblyReference.cache
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.Server.resources
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.Properties.Resources.resources
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.csproj.GenerateResource.cache
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+C:\Users\f0cuS\source\repos\Chat\Server\bin\Debug\Server.exe.config
+C:\Users\f0cuS\source\repos\Chat\Server\bin\Debug\Server.exe
+C:\Users\f0cuS\source\repos\Chat\Server\bin\Debug\Server.pdb
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.exe
+C:\Users\f0cuS\source\repos\Chat\Server\obj\Debug\Server.pdb
+D:\repos\Chat\Server\bin\Debug\Server.exe.config
+D:\repos\Chat\Server\bin\Debug\Server.exe
+D:\repos\Chat\Server\bin\Debug\Server.pdb
+D:\repos\Chat\Server\obj\Debug\Server.csprojAssemblyReference.cache
+D:\repos\Chat\Server\obj\Debug\Server.Server.resources
+D:\repos\Chat\Server\obj\Debug\Server.Properties.Resources.resources
+D:\repos\Chat\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\repos\Chat\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\repos\Chat\Server\obj\Debug\Server.exe
+D:\repos\Chat\Server\obj\Debug\Server.pdb
+D:\repos\Chat - 15.10.2019\Server\bin\Debug\Server.exe.config
+D:\repos\Chat - 15.10.2019\Server\bin\Debug\Server.exe
+D:\repos\Chat - 15.10.2019\Server\bin\Debug\Server.pdb
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.Server.resources
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.Properties.Resources.resources
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.csproj.GenerateResource.cache
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.exe
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.pdb
+D:\repos\Chat - 15.10.2019\Server\obj\Debug\Server.csprojAssemblyReference.cache
