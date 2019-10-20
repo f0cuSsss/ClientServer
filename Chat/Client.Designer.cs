@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.MessageLog = new System.Windows.Forms.ListBox();
             this.tbNickname = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,6 +43,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnSignIN = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
+            this.btnSync = new System.Windows.Forms.Button();
+            this.timerSync = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -188,11 +191,27 @@
             this.btnLogout.Visible = false;
             this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
+            // btnSync
+            // 
+            this.btnSync.Location = new System.Drawing.Point(468, 8);
+            this.btnSync.Name = "btnSync";
+            this.btnSync.Size = new System.Drawing.Size(75, 23);
+            this.btnSync.TabIndex = 9;
+            this.btnSync.Text = "Sync";
+            this.btnSync.UseVisualStyleBackColor = true;
+            this.btnSync.Click += new System.EventHandler(this.btnSync_Click);
+            // 
+            // timerSync
+            // 
+            this.timerSync.Interval = 1500;
+            this.timerSync.Tick += new System.EventHandler(this.timerSync_Tick);
+            // 
             // Client
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(853, 319);
+            this.Controls.Add(this.btnSync);
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnSignIN);
             this.Controls.Add(this.groupBox1);
@@ -201,6 +220,8 @@
             this.Controls.Add(this.tbNickname);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MessageLog);
+            this.MaximumSize = new System.Drawing.Size(869, 358);
+            this.MinimumSize = new System.Drawing.Size(869, 358);
             this.Name = "Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Chat";
@@ -228,6 +249,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnSignIN;
         private System.Windows.Forms.Button btnLogout;
+        private System.Windows.Forms.Button btnSync;
+        private System.Windows.Forms.Timer timerSync;
     }
 }
 

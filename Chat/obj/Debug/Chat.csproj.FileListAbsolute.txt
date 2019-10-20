@@ -17,7 +17,6 @@ D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csproj.GenerateResource.cache
 D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.csproj.CoreCompileInputs.cache
 D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.exe
 D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.pdb
-D:\repos\Chat - 15.10.2019\Chat\obj\Debug\Chat.RegistrationForm.resources
 D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.exe
 D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.pdb
 D:\repos\Chat - 15.10.2019\Chat\bin\Debug\Server.exe.config

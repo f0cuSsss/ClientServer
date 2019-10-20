@@ -41,7 +41,7 @@ namespace Server
             InitializeComponent();
             messages = new List<ChatMessage>();
             users = new List<User>();
-            
+
         }
 
         void StartServer()
@@ -154,11 +154,13 @@ namespace Server
                                     ID = (messages.Count > 0) ? messages[messages.Count - 1].ID + 1 : 1,
                                     Sender_ID = user_ID,
                                     Sender_Nick = author,
-                                    //Receiver_ID = 1,
+                                    Receiver_ID = -1,
                                     msgText = message,
 
                                     Moment = DateTime.Now
                                 };
+
+
                                 messages.Add(newMSG);
                                 msg = newMSG.ToSendString();
                                 //msg = author + ": " + message;
@@ -193,10 +195,57 @@ namespace Server
                             break;
                         case Configs.SYNC_CMD:
                             {
+                                int user_ID = -1;
+                                try // Безопасная проверка ответа от сервера
+                                {
+                                    user_ID = Convert.ToInt32(parts[1]);
+                                }
+                                catch
+                                {
+                                    msg = Configs.STATUS_SYNC_FAIL + Configs.CMD_SEPARATOR + "Не распознано: " + str;
+                                    break;
+                                }
 
+                                User curUser = null;
+                                String mes = String.Empty;
+                                String fullMessagesSync = String.Empty;
+
+                                try
+                                {
+                                        /* Пользователь, который запросил синхронизацию */
+                                    curUser = users.Where(u => u.ID == user_ID).First();
+
+                                    IEnumerable<ChatMessage> messages = MessagesGroup(user_ID);
+                                    if (!messages.Count().Equals(0))
+                                    {
+                                        foreach (ChatMessage chatMessage in messages)
+                                        {
+                                            if (curUser.Sync < chatMessage.Moment)
+                                            {
+                                                mes = $"{chatMessage.Sender_Nick}: {chatMessage.msgText} [{chatMessage.Moment.ToShortTimeString()}]";
+                                                fullMessagesSync += mes + Configs.MSG_SEPARATOR;
+                                            }
+                                        }
+                                        curUser.Sync = DateTime.Now;
+                                    }
+                                    else
+                                    {
+                                        ServerLog.Items.Add($"Нечего синхронизировать");
+                                        msg = Configs.STATUS_SYNC_NOTHING;
+                                        break;
+                                    }
+                                }
+                                catch
+                                {
+                                    msg = Configs.STATUS_SYNC_FAIL + Configs.CMD_SEPARATOR + "Ошибка!";
+                                    break;
+                                }
+
+                                msg = Configs.STATUS_SYNC_OK + Configs.CMD_SEPARATOR + fullMessagesSync;
+                                ServerLog.Items.Add($"Пользователь {curUser.Name} успешно синхронизировался!");
                             }
                             break;
-                        default:    
+                        default:
                                 /* Ответ сервера по-умолчанию */
                             msg = $"[{receiveTime}]: Сообщение отправлено";
                             break;
@@ -219,7 +268,20 @@ namespace Server
             }
         }
 
+        //private IEnumerable<ChatMessage> MessagesGroup()
+        //{
+        //    return messages.Where(msg => msg.Receiver_ID == -1); 
+        //}
 
+        private IEnumerable<ChatMessage> MessagesGroup(int _userID)
+        {
+            return messages.Where(msg => msg.Receiver_ID == -1 && msg.Sender_ID != _userID);
+        }
+
+        private IEnumerable<ChatMessage> MessageToUser(int _userID)
+        {
+            return messages.Where(msg => msg.Receiver_ID == _userID);
+        }
 
         private void btnStart_Click(object sender, EventArgs e)
         {

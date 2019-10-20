@@ -101,7 +101,8 @@ namespace Chat
 
 
             MessageLog.Items.Add(
-                $"{message.Sender_Nick}: {message.msgText} | [{message.Moment.ToShortTimeString()}]");
+                $"\t{message.msgText} | [{message.Moment.ToShortTimeString()}]");
+            tbMessage.Clear();
 
         }
 
@@ -146,10 +147,9 @@ namespace Chat
             {
                 MessageLog.Items.Add($"Ответ сервера не распознан {serverAnswer}");
             }
-            
+            timerSync.Enabled = true;
            // btnSignIN.Enabled = false;
         }
-
 
         private void btnLogout_Click(object sender, EventArgs e)
         {
@@ -190,10 +190,74 @@ namespace Chat
             {
                 MessageLog.Items.Add($"Ответ сервера не распознан {serverAnswer}");
             }
+
+            timerSync.Enabled = false;
+        }
+
+        private void btnSync_Click(object sender, EventArgs e)
+        {
+            startSync();
+        }
+
+        private void timerSync_Tick(object sender, EventArgs e)
+        {
+            //startSync();
+        }
+
+        private void startSync()
+        {
+            String msg =
+              Configs.SYNC_CMD + Configs.CMD_SEPARATOR
+                + user_ID;
+
+            /* Обмениваемся данными с сервером */
+            String serverAnswer = null;
+            try
+            {
+                serverAnswer = Exchange(msg);
+            }
+            catch (Exception ex)
+            {
+                MessageLog.Items.Add("Exception: " + ex.Message); return;
+            }
+
+
+
+            /* Анализируем ответ от сервера */
+            String[] parts = serverAnswer.Split(Configs.CMD_SEPARATOR);
+            if (Configs.STATUS_SYNC_FAIL.Equals(parts[0]))
+            {
+                //MessageLog.Items.Add($"{parts[1]}");
+            }
+            else if (Configs.STATUS_SYNC_OK.Equals(parts[0]))
+            {
+                String[] args = null;
+                try
+                {
+                    args = parts[1].Split(Configs.MSG_SEPARATOR);
+                    foreach (var item in args)
+                    {
+                        if (!item.Equals(String.Empty))
+                        {
+                            MessageLog.Items.Add($"{item}");
+                        }
+                    }
+
+                }
+                catch
+                {
+                    //throw;
+                    return;
+                }
+            }
+            else
+            {
+                MessageLog.Items.Add($"Ответ сервера не распознан {serverAnswer}");
+            }
         }
 
         /// <summary>
-        /// Отправка и получение строки на сервер
+        /// Отправка запроса на сервер и получение ответа
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>

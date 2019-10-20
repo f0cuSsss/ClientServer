@@ -156,6 +156,8 @@
             this.ClientSize = new System.Drawing.Size(486, 293);
             this.Controls.Add(this.ServerLog);
             this.Controls.Add(this.groupBox1);
+            this.MaximumSize = new System.Drawing.Size(502, 332);
+            this.MinimumSize = new System.Drawing.Size(502, 332);
             this.Name = "Server";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Server";
